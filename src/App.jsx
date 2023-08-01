@@ -3,6 +3,7 @@ import Buttons from './Components/Buttons';
 import Welcome from './Components/Welcome';
 import AddIncome from './Components/AddIncome';
 import AddExpense from './Components/AddExpense';
+import AddDebt from './Components/AddDebt';
 
 function App() {
   return (
@@ -18,7 +19,8 @@ function App() {
         <div className="right-div" id="right-div">
           {/* <Welcome></Welcome> */}
           {/* <AddIncome></AddIncome> */}
-          <AddExpense></AddExpense>
+          {/* <AddExpense></AddExpense> */}
+          <AddDebt></AddDebt>
         </div>
       </div>
       <hr className="break"></hr>

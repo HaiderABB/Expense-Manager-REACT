@@ -1,5 +1,4 @@
 import React from 'react';
-import { ReactDOM } from 'react';
 
 function Welcome() {
   return (

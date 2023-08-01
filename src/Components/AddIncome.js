@@ -4,7 +4,11 @@ function AddIncome() {
   return (
     <div className="AddIncome">
       <div className="incomeContainer">
-        <input type="Number" className="income-button"></input>
+        <input
+          type="Number"
+          className="income-button"
+          placeholder="Enter Amount"
+        ></input>
       </div>
       <button className="submit">Submit</button>
     </div>

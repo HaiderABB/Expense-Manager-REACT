@@ -4,15 +4,19 @@ function AddExpense() {
   return (
     <div class="expense">
       <div className="expenseContainer">
-        <input type="Number" className="income-button"></input>
+        <input
+          type="Number"
+          className="income-button"
+          placeholder="Enter Amount"
+        ></input>
         <select>
-          <option>Automobile</option>
-          <option>Entertainment</option>
-          <option>Food</option>
-          <option>Health Care</option>
-          <option>Personal</option>
-          <option>Travel</option>
-          <option>Utilities</option>
+          <option value="Automobile">Automobile</option>
+          <option value="Entertainment">Entertainment</option>
+          <option value="Food">Food</option>
+          <option value="Health Care">Health Care</option>
+          <option value="Personal">Personal</option>
+          <option value="Travel">Travel</option>
+          <option value="Utilities">Utilities</option>
         </select>
       </div>
       <button className="submit">Submit</button>
