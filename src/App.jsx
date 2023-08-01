@@ -17,10 +17,10 @@ function App() {
           <Buttons></Buttons>
         </div>
         <div className="right-div" id="right-div">
-          {/* <Welcome></Welcome> */}
+          <Welcome></Welcome>
           {/* <AddIncome></AddIncome> */}
           {/* <AddExpense></AddExpense> */}
-          <AddDebt></AddDebt>
+          {/* <AddDebt></AddDebt> */}
         </div>
       </div>
       <hr className="break"></hr>
