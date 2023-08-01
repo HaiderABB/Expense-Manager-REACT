@@ -1,5 +1,11 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App {
-  text-align: center;
+  background-color: #282c34;
 }
 
 .App-logo {
@@ -7,32 +13,95 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 100%;
   color: white;
+  text-align: center;
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  overflow: hidden;
+  background-color: #343028;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-div {
+  float: left;
+  width: 25%;
+}
+
+.right-div {
+  float: right;
+  width: 75%;
+}
+
+.Button-styling {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.welcome {
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 30px;
+  margin-top: 8%;
+}
+
+.nav {
+  color: whitesmoke;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 20px;
+  margin-top: 2%;
+}
+.income-button {
+  height: 40px;
+  margin-top: 7%;
+  width: 15%;
+  text-align: center;
+  background-color: rgb(13, 226, 226);
+  color: black;
+  font-size: 19px;
+}
+
+.incomeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.AddIncome button {
+  width: 10%;
+  margin-left: 45%;
+  margin-top: 1%;
+}
+
+button {
+  width: 70%;
+  height: 50px;
+  font-size: 20px;
+  margin-top: 3%;
+  margin-left: 3.6%;
+  background-color: rgb(13, 226, 226);
+}
+
+button:hover {
+  background-color: black;
+  color: rgb(13, 226, 226);
+}
+
+br {
+  margin-top: 5px;
+}
+
+hr {
+  border-color: rgb(255, 238, 1);
+  background-color: rgb(201, 128, 26);
+  border-width: 2px;
+  height: 2px;
 }
