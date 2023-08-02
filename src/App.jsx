@@ -7,10 +7,7 @@ function App() {
   const [C, setC] = useState(0);
   const setV = (valueC) => {
     setC(valueC);
-    console.log(C);
   };
-
-  console.log(C);
 
   return (
     <div className="App">
