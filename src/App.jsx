@@ -1,11 +1,17 @@
 import './App.css';
 import Buttons from './Components/Buttons';
-import Welcome from './Components/Welcome';
-import AddIncome from './Components/AddIncome';
-import AddExpense from './Components/AddExpense';
-import AddDebt from './Components/AddDebt';
+import { useState } from 'react';
+import Control from './Components/ControlC';
 
 function App() {
+  const [C, setC] = useState(0);
+  const setV = (valueC) => {
+    setC(valueC);
+    console.log(C);
+  };
+
+  console.log(C);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -14,14 +20,10 @@ function App() {
       <hr></hr>
       <div className="container">
         <div className="left-div" id="left-div">
-          <Buttons></Buttons>
+          <Buttons changeValue={setV}></Buttons>
         </div>
-        <div className="right-div" id="right-div">
-          <Welcome></Welcome>
-          {/* <AddIncome></AddIncome> */}
-          {/* <AddExpense></AddExpense> */}
-          {/* <AddDebt></AddDebt> */}
-        </div>
+        <div className="right-div" id="right-div"></div>
+        <Control number={C}></Control>
       </div>
       <hr className="break"></hr>
     </div>

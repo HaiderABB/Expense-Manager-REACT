@@ -8,8 +8,9 @@ function AddExpense() {
           type="Number"
           className="income-button"
           placeholder="Enter Amount"
+          required
         ></input>
-        <select>
+        <select required>
           <option value="Automobile">Automobile</option>
           <option value="Entertainment">Entertainment</option>
           <option value="Food">Food</option>

@@ -8,6 +8,7 @@ function AddIncome() {
           type="Number"
           className="income-button"
           placeholder="Enter Amount"
+          required
         ></input>
       </div>
       <button className="submit">Submit</button>
