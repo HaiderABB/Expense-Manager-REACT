@@ -6,6 +6,9 @@ function AddIncome(props) {
     let amount = document.getElementById('income-button').value;
     if (CheckAmount(parseInt(amount))) {
       props.setIncome((prevAmount) => prevAmount + parseInt(amount));
+      props.setAmount((prevAmount) => prevAmount + parseInt(amount));
+      alert('Income Added Successfully');
+      props.setC(parseInt(0));
     }
   };
 

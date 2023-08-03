@@ -20,7 +20,7 @@ function App() {
           <Buttons changeValue={setV}></Buttons>
         </div>
         <div className="right-div" id="right-div"></div>
-        <Control number={C}></Control>
+        <Control number={C} setC={setC}></Control>
       </div>
       <hr className="break"></hr>
     </div>

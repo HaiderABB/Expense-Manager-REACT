@@ -7,11 +7,11 @@ import { useState } from 'react';
 
 function Control(props) {
   const [totalIncome, setIncome] = useState(parseInt(0));
-  const [totalAmount, setAmount] = useState(0);
+  const [totalAmount, setAmount] = useState(parseInt(0));
   const [ExpenseAmount, setExpenseAmount] = useState([]);
-  const [ExpenseCategory, setCategory] = useState(['']);
-  const [Lent, setLent] = useState(['']);
-  const [borrowed, setBorrow] = useState(['']);
+  const [ExpenseCategory, setCategory] = useState([]);
+  const [Lent, setLent] = useState([]);
+  const [borrowed, setBorrow] = useState([]);
   const [LentAmount, setLentAmount] = useState([]);
   const [borrowedAmount, setBorrowAmount] = useState([]);
 
@@ -24,12 +24,37 @@ function Control(props) {
         totalAmount={totalAmount}
         setIncome={setIncome}
         setAmount={setAmount}
+        setC={props.setC}
       ></AddIncome>
     );
   } else if (props.number === 2) {
-    return <AddExpense></AddExpense>;
+    return (
+      <AddExpense
+        ExpenseAmount={ExpenseAmount}
+        setExpenseAmount={setExpenseAmount}
+        ExpenseCategory={ExpenseCategory}
+        setCategory={setCategory}
+        setC={props.setC}
+        totalAmount={totalAmount}
+        setAmount={setAmount}
+      ></AddExpense>
+    );
   } else if (props.number === 3) {
-    return <AddDebt></AddDebt>;
+    return (
+      <AddDebt
+        Lent={Lent}
+        setLent={setLent}
+        borrowed={borrowed}
+        setBorrow={setBorrow}
+        LentAmount={LentAmount}
+        setLentAmount={setLentAmount}
+        borrowedAmount={borrowedAmount}
+        setBorrowAmount={setBorrowAmount}
+        totalAmount={totalAmount}
+        setAmount={setAmount}
+        setC={props.setC}
+      ></AddDebt>
+    );
   }
 }
 
