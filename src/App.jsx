@@ -2,12 +2,13 @@ import './App.css';
 import Buttons from './Components/Buttons';
 import { useState } from 'react';
 import Control from './Components/ControlC';
-
+import ExpenseChart from './Components/ExpenseChart';
 function App() {
   const [C, setC] = useState(0);
   const setV = (valueC) => {
     setC(valueC);
   };
+  const [ExpenseCategory, setCategory] = useState([]);
 
   return (
     <div className="App">
@@ -20,9 +21,19 @@ function App() {
           <Buttons changeValue={setV}></Buttons>
         </div>
         <div className="right-div" id="right-div"></div>
-        <Control number={C} setC={setC}></Control>
+        <Control
+          number={C}
+          setC={setC}
+          ExpenseCategory={ExpenseCategory}
+          setCategory={setCategory}
+        ></Control>
       </div>
       <hr className="break"></hr>
+      <div className="Dashboard">
+        <div id="left-dash"></div>
+        <ExpenseChart></ExpenseChart>
+      </div>
+      <div id="right-dash"></div>
     </div>
   );
 }

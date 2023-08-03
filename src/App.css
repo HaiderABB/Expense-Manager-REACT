@@ -167,6 +167,20 @@
   text-align: center;
 }
 
+/*-------------------------------Dashboard------------------------------*/
+
+.Dashboard {
+  overflow: hidden;
+}
+#left-dash {
+  float: left;
+  width: 25%;
+}
+#right-dash {
+  float: right;
+  width: 50%;
+}
+
 /*------------------------------ General Tags --------------------------*/
 
 .break {
@@ -196,4 +210,8 @@ hr {
 button:hover {
   background-color: black;
   color: rgb(13, 226, 226);
+}
+
+p {
+  color: red;
 }

@@ -9,7 +9,7 @@ function Control(props) {
   const [totalIncome, setIncome] = useState(parseInt(0));
   const [totalAmount, setAmount] = useState(parseInt(0));
   const [ExpenseAmount, setExpenseAmount] = useState([]);
-  const [ExpenseCategory, setCategory] = useState([]);
+  // const [ExpenseCategory, setCategory] = useState([]);
   const [Lent, setLent] = useState([]);
   const [borrowed, setBorrow] = useState([]);
   const [LentAmount, setLentAmount] = useState([]);
@@ -32,8 +32,8 @@ function Control(props) {
       <AddExpense
         ExpenseAmount={ExpenseAmount}
         setExpenseAmount={setExpenseAmount}
-        ExpenseCategory={ExpenseCategory}
-        setCategory={setCategory}
+        ExpenseCategory={props.ExpenseCategory}
+        setCategory={props.setCategory}
         setC={props.setC}
         totalAmount={totalAmount}
         setAmount={setAmount}
