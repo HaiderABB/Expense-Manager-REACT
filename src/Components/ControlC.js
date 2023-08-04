@@ -4,12 +4,12 @@ import AddDebt from './AddDebt';
 import AddExpense from './AddExpense';
 import AddIncome from './AddIncome';
 import { useState } from 'react';
+import ViewExpenses from './ViewExpenses';
 
 function Control(props) {
   const [totalIncome, setIncome] = useState(parseInt(0));
   const [totalAmount, setAmount] = useState(parseInt(0));
-  const [ExpenseAmount, setExpenseAmount] = useState([]);
-  // const [ExpenseCategory, setCategory] = useState([]);
+  const [ExpenseAmount, setExpenseAmount] = useState(parseInt(0));
   const [Lent, setLent] = useState([]);
   const [borrowed, setBorrow] = useState([]);
   const [LentAmount, setLentAmount] = useState([]);
@@ -32,11 +32,23 @@ function Control(props) {
       <AddExpense
         ExpenseAmount={ExpenseAmount}
         setExpenseAmount={setExpenseAmount}
-        ExpenseCategory={props.ExpenseCategory}
-        setCategory={props.setCategory}
         setC={props.setC}
         totalAmount={totalAmount}
         setAmount={setAmount}
+        Automobile={props.Automobile}
+        setAutomobile={props.setAutomobile}
+        Personal={props.Personal}
+        setPersonal={props.setPersonal}
+        HealthCare={props.HealthCare}
+        setHealth={props.setHealth}
+        Food={props.Food}
+        setFood={props.setFood}
+        Entertainment={props.Entertainment}
+        setEntertainment={props.setEntertainment}
+        Utilities={props.Utilities}
+        setUtility={props.setUtility}
+        Travel={props.Travel}
+        setTravel={props.setTravel}
       ></AddExpense>
     );
   } else if (props.number === 3) {
@@ -54,6 +66,19 @@ function Control(props) {
         setAmount={setAmount}
         setC={props.setC}
       ></AddDebt>
+    );
+  } else if (props.number === 4) {
+    return (
+      <ViewExpenses
+        ExpenseAmount={ExpenseAmount}
+        Automobile={props.Automobile}
+        Travel={props.Travel}
+        Utilities={props.Utilities}
+        Entertainment={props.Entertainment}
+        Food={props.Food}
+        HealthCare={props.HealthCare}
+        Personal={props.Personal}
+      ></ViewExpenses>
     );
   }
 }

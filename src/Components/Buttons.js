@@ -14,13 +14,16 @@ function Buttons(props) {
   function debt() {
     changeValue(3);
   }
+  function ViewExpense() {
+    changeValue(4);
+  }
 
   return (
     <div className="Button-styling">
       <button onClick={() => income()}>Add Income</button>
       <button onClick={() => expense()}>Add Expense</button>
       <button onClick={() => debt()}>Add Debt</button>
-      <button>View Expenses</button>
+      <button onClick={() => ViewExpense()}>View Expenses</button>
       <button>View Debt</button>
       <button>View Account Summary</button>
     </div>

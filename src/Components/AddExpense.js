@@ -7,14 +7,26 @@ function AddExpense(props) {
     let category = document.getElementById('category').value;
 
     if (CheckAmount(amount) && parseInt(amount) <= props.totalAmount) {
-      props.setExpenseAmount(
-        [...props.ExpenseAmount, amount],
-        console.log(props.ExpenseAmount)
-      );
-      props.setCategory(
-        [...props.ExpenseCategory, category],
-        console.log(props.ExpenseCategory)
-      );
+      //               TotalExpense
+      props.setExpenseAmount((prevAmount) => prevAmount + parseInt(amount));
+
+      //                   Category Check
+      if (category === 'Automobile') {
+        props.setAutomobile([...props.Automobile, amount]);
+      } else if (category === 'Entertainment') {
+        props.setEntertainment([...props.Entertainment, amount]);
+      } else if (category === 'Food') {
+        props.setFood([...props.Food, amount]);
+      } else if (category === 'Health Care') {
+        props.setHealth([...props.HealthCare, amount]);
+      } else if (category === 'Utilities') {
+        props.setUtility([...props.Utilities, amount]);
+      } else if (category === 'Personal') {
+        props.setPersonal([...props.Personal, amount]);
+      } else if (category === 'Travel') {
+        props.setTravel([...props.Travel, amount]);
+      }
+      ///////////////////////////////////////////////
       props.setC(parseInt(0));
       alert('Expense Added Successfully');
       props.setAmount((prevAmount) => prevAmount - parseInt(amount));
@@ -24,7 +36,7 @@ function AddExpense(props) {
   }
 
   return (
-    <div class="expense">
+    <div className="expense">
       <div className="expenseContainer">
         <input
           type="Number"
