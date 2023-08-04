@@ -8,7 +8,13 @@ function App() {
   const setV = (valueC) => {
     setC(valueC);
   };
-  const [ExpenseCategory, setCategory] = useState([]);
+  const [Automobile, setAutomobile] = useState([]);
+  const [Entertainment, setEntertainment] = useState([]);
+  const [Travel, setTravel] = useState([]);
+  const [HealthCare, setHealth] = useState([]);
+  const [Personal, setPersonal] = useState([]);
+  const [Food, setFood] = useState([]);
+  const [Utilities, setUtility] = useState([]);
 
   return (
     <div className="App">
@@ -24,8 +30,20 @@ function App() {
         <Control
           number={C}
           setC={setC}
-          ExpenseCategory={ExpenseCategory}
-          setCategory={setCategory}
+          Automobile={Automobile}
+          setAutomobile={setAutomobile}
+          Personal={Personal}
+          setPersonal={setPersonal}
+          HealthCare={HealthCare}
+          setHealth={setHealth}
+          Food={Food}
+          setFood={setFood}
+          Entertainment={Entertainment}
+          setEntertainment={setEntertainment}
+          Utilities={Utilities}
+          setUtility={setUtility}
+          Travel={Travel}
+          setTravel={setTravel}
         ></Control>
       </div>
       <hr className="break"></hr>
