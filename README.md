@@ -1,3 +1,5 @@
+
+Tried creating an Expense Manager in JavaScript using the React Library, with HTML/CSS and using UI components from Material UI.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
